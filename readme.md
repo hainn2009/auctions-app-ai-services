@@ -14,6 +14,17 @@ python model/train.py
 
 uvicorn app:app --reload --port 8000
 
+### Docker
+
+Build and run locally:
+
+```bash
+docker build -t ai-services .
+docker run --rm -p 8000:8000 ai-services
+```
+
+In the monorepo compose stack, the service is available at `http://ai-service:8000` from other containers.
+
 ### What is available
 
 - `POST /predict`:
